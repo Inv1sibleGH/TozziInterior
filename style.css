@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+}
+section{
+    height: 30rem;
+    border-bottom: 1px solid goldenrod ;
+}
+a{
+    text-decoration: none;
+    color: goldenrod;
+    text-shadow: 1px 1px 2px black;
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(index_assets/pexels-fotoaibe-1643383.jpg);
+    background-attachment:fixed ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+#hero h1{
+    font-size: 7rem;
+    font-weight: bold;
+    color: goldenrod;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 0;
+}
+#hero h2{
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+header{
+    position:fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    display: none;
+}
+nav{
+    display: flex;
+}
+nav a{
+    margin: 1rem;
+}
+nav a h2{
+    margin: 0.5rem 0 0 0;
+}
+nav a:hover{
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+
+
+
+#ko-smo-mi{
+
+}
+#ko-smo-mi-text{
+    width: 50%;
+    height: 100%;
+}
+#ko-smo-mi-text .text{
+    padding: 0 0 0 20%;
+}
+#ko-smo-mi h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px black;
+    color: gold;
+}
+#ko-smo-mi p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+
+
+#usluge{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(index_assets/pexels-photo-7195736.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45rem;
+    padding: 3rem 0 2rem 0;
+}
+#usluge .naslov{
+    width: 100%;
+    padding: 0 20%;
+    text-align: center;
+}
+#usluge .naslov h2{
+    font-size: 3rem;
+    color: rgb(233, 177, 34);
+    text-shadow: 1px 1px 2px black;
+    margin: 2rem 0;
+}
+#boxevi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#boxevi .box{
+    background-color: rgb(80, 80, 80);
+    flex-grow: 1;
+    margin: 0 4% 2% 4%;
+    box-shadow: 10px 10px rgb(133, 96, 2);
+    border-radius: 1rem;
+}
+#boxevi .box img{
+    height: 15rem;
+}
+#boxevi .box:hover{
+    transform:scale(1.1);
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 20rem;
+    width: 100%;
+    background-color: #151515;
+    display: flex;
+}
+footer > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-left: 5rem;
+}
+footer + div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer img{
+    max-width: 100%;
+    height: auto;
+}
