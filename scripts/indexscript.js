@@ -17,3 +17,19 @@ document.addEventListener("scroll", () => {
       header.style.transition ="";
     }
   });
+var btnback = document.getElementById("backbutton");
+var btnnext = document.getElementById("nextbutton");
+var imagedisplay = document.getElementById("galerija")
+var images = ["url(index_assets/pexels-falling4utah-2724749.jpg)","url(index_assets/pexels-fotoaibe-1643383.jpg)","url(index_assets/pexels-lexovertoom-1109541.jpg)","url(index_assets/pexels-photo-7195736.jpeg)"]
+var imageindex = 0;
+btnback.addEventListener('click', () => {
+  imageindex = (imageindex + 1) % images.length;
+  updateimage();
+});
+btnnext.addEventListener('click', () => {
+  imageindex = (imageindex - 1 + images.length) % images.length;
+  updateimage();
+});
+function updateimage(){
+  imagedisplay.style.backgroundImage = images[imageindex];
+}

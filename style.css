@@ -187,7 +187,7 @@ nav a:hover{
 .box p{
     padding: 0 1rem;
 }
-/*
+
 #galerija{
     height: 90vh;
     background-image: url(index_assets/pexels-falling4utah-2724749.jpg);
@@ -199,9 +199,12 @@ nav a:hover{
 #galerija button{
     background-color:rgba(0, 0, 0, 0.1);
     border: none;
+    width: 18%;
 }
-
-*/
+#galerija button:hover{
+    transition: 0.4s;
+    background-color:rgba(0, 0, 0, 0.4);
+}
 
 
 
