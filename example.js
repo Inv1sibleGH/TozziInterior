@@ -1,0 +1,1 @@
+document.getElementById("ko-smo-mi-text").height = "6rem";
