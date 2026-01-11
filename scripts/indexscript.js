@@ -1,22 +1,23 @@
 document.addEventListener("scroll", () => {
     const header = document.querySelector("#header");
   
-    // Define the scroll threshold
+    // visina na kojoj se smanjuje header
     const threshold = 550; 
   
-    // Check current scroll position
     if (window.scrollY > threshold) {
-      header.style.backgroundColor = "rgba(0, 0, 0, 0.7)"; // Darker background
-      header.style.height = "3rem";
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+      header.style.height = "4.5rem";
       document.getElementById("fushlogo").style.display = "block";
       header.style.transition = "background-color 0.3s";
     } else {
-      header.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Transparent background
+      header.style.backgroundColor = "rgba(0, 0, 0, 0)"; 
       header.style.height = "10vh";
       document.getElementById("fushlogo").style.display = "none";
       header.style.transition ="";
     }
   });
+
+  //galerija na index strani
 var btnback = document.getElementById("backbutton");
 var btnnext = document.getElementById("nextbutton");
 var imagedisplay = document.getElementById("galerija")
@@ -33,3 +34,16 @@ btnnext.addEventListener('click', () => {
 function updateimage(){
   imagedisplay.style.backgroundImage = images[imageindex];
 }
+
+//hamburger meni
+var hamburgerbtn = document.getElementById("burger-button");
+var navmenu = document.getElementById("navMenu");
+hamburgerbtn.addEventListener('click', () => {
+  if (navmenu.classList.contains("nav-menu-open")) {
+    navmenu.classList.remove("nav-menu-open");
+    
+  } else {
+    navmenu.classList.add("nav-menu-open");
+  }
+
+});

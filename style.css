@@ -22,9 +22,14 @@ body{
     margin: 0;
     padding: 0;
     background-color: #1f1f1f;
+    min-height: 100vh;
+}
+.first-section{
+    height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 section{
-    height: 30rem;
+    height: auto;
     border-bottom: 1px solid goldenrod ;
 }
 a{
@@ -58,7 +63,7 @@ a{
 header{
     position:fixed;
     width: 100%;
-    height: 10vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0); /* Start fully transparent */
@@ -97,14 +102,18 @@ nav a:hover{
 
 #ko-smo-mi{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    padding: 0 10% 0 10%;
 }
 #ko-smo-mi-text{
     width: 50%;
     height: 100%;
+    ;
 }
 #ko-smo-mi-text .text{
-    padding: 0 0 0 20%;
+    
 }
 #ko-smo-mi h3{
     font-size: 3rem;
@@ -119,9 +128,12 @@ nav a:hover{
 #ko-smo-mi video{
     width: 100%;
     height: 100%;
-    padding-right: 15rem;
 }
-
+.video-box{
+    width: 50%;
+    height: 30rem;
+    ;
+}
 
 
 
@@ -133,7 +145,7 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 45rem;
+    height: auto;
     padding: 3rem 0 2rem 0;
 }
 #usluge .naslov{
@@ -149,20 +161,27 @@ nav a:hover{
 }
 #boxevi{
     width: 100%;
-    height: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* lepo poravnanje kad ostane 1 u redu */
+    gap: 2%; /* bolje od margin-hacka */
 }
+
+/* BOX */
 #boxevi .box{
-    background-color: rgb(80, 80, 80);
-    flex-grow: 1;
-    margin: 0 4% 2% 4%;
-    box-shadow: 10px 10px rgb(27, 27, 27);
+    background-color: rgb(153, 153, 153);
+    box-shadow: 10px 10px rgb(103, 82, 6);
     border-radius: 1rem;
     display: flex;
-    flex-basis: 0;
     flex-direction: column;
     align-items: center;
+
+    /* desktop: 3 u redu */
+    flex: 0 1 28%;
+    margin: 0 0 2% 0; /* vertikalni razmak, horizontalni rešava gap */
 }
+
+/* hover ostaje */
 #boxevi .box:hover{
     transform:scale(1.02);
     transition-duration: 0.2s;
@@ -170,12 +189,12 @@ nav a:hover{
 }
 .box-picture{
     width: 80%;
-    height: 30%;
+    height: 100%;
     margin-top: 5%;
 }
 .box-picture img{
     width: 100%;
-    height: 100%;
+    height: 40%;
     object-fit: cover;
     margin-top: 5%;
 }
@@ -206,16 +225,57 @@ nav a:hover{
     background-color:rgba(0, 0, 0, 0.4);
 }
 
+/*fix za header da bi radio sa js, ignorisite header iznad molicu*/
+/* NAV WRAPPER */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
 
+/* DESKTOP MENU (HORIZONTALNO) */
+.nav-menu{
+  list-style: none;
+  display: flex;              
+  flex-direction: row;        
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
 
+.nav-menu li{
+  margin: 0;                  
+}
+
+.nav-toggle{
+  display: none;              
+  font-size: 28px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+}
+#burger-button{
+    position: relative;
+}
+.fa-bars{
+    color: goldenrod;
+    font-size: 4rem;
+    padding: 1rem;
+}
+/* ostatak je u @media za telefone sa display:none */
 
 
 
 footer{
-    height: 20rem;
+    height: auto;
+    padding: 2rem 10%;
     width: 100%;
     background-color: #151515;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 footer h4{
     color: goldenrod;
@@ -242,4 +302,227 @@ footer img{
 footer i{
     color: grey;
     font-size: 2rem;
+    position: relative;
+    top: 0.7rem;
+    right: 0.5rem;
+}
+footer .footer-links{
+    color: gainsboro;
+    font-size: 1.2rem;
+    
+}
+
+
+
+
+
+
+
+
+
+#o-autoru{
+    height: 80vh;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+#kontakt-sekcija {
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* FORM */
+.contact-form{
+  width: 100%;
+  max-width: 560px;
+  padding: 28px 22px;
+  border-radius: 16px;
+  background: rgba(41, 41, 41, 0.9);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+}
+
+.contact-form h2{
+  color: goldenrod;
+  margin: 0 0 18px 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.contact-form label{
+    padding-left: 0.5rem;
+    color: white;
+    display: block;
+    margin: 14px 0 6px 0;
+    font-size: 1rem;
+}
+.contact-form input{
+    color: white;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.25);
+  outline: none;
+  transition: border-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea{
+    color: rgb(184, 187, 201);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form select{
+    color: white;
+}
+
+.contact-form option{
+    color: black;
+    background-color: rgb(197, 197, 197);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  border-color: rgba(255, 241, 160, 0.8);
+  box-shadow: 0 0 0 3px rgba(208, 187, 0, 0.15);
+}
+
+.contact-form button[type="submit"]{
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background: goldenrod;
+  color: #111;
+  transition: transform 0.12s ease, filter 0.2s ease;
+}
+
+.contact-form button[type="submit"]:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.contact-form button[type="submit"]:active{
+  transform: translateY(0);
+}
+
+.error{
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #ab4a27;
+  min-height: 1em;
+}
+
+.success{
+  margin-top: 12px;
+  color: #00901f;
+  font-weight: 600;
+  min-height: 1em;
+}
+
+.input-error{
+  border-color: rgba(196, 51, 51, 0.9) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    #ko-smo-mi{
+        flex-direction: column;
+        align-items: center;
+    }
+    #ko-smo-mi-text, .video-box{
+        width: 90%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    #boxevi .box{
+        flex: 0 1 46%;
+    }
+
+    /* hamburger meni za tablete */
+    .nav-toggle{
+        display: block;   
+    }
+    .nav-menu{
+        display: none;
+        flex-direction: column; 
+    }
+
+    .nav-menu-open{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        background-color: rgba(41, 41, 41, 0.9);
+    }
+    /**/
+    /* dugme ostaje gore desno */
+  #header nav {
+    position: relative;
+  }
+
+  .nav-toggle{
+    display: block;
+    position: relative;
+    z-index: 1001; /* iznad menija */
+  }
+
+  /* MENI KAO PANEL */
+  .nav-menu{
+    /* ovo je ključ: ne gura ništa */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 4.5rem 20px 20px;    /* da ne udara u header */
+    margin: 0;
+    list-style: none;
+
+    background: rgba(41, 41, 41, 0.5);
+    backdrop-filter: blur(6px);
+
+  }
+
+  .nav-menu.open{
+    transform: translateX(0);   /* uđe na ekran */
+  }
+    
+}
+@media (max-width: 768px){
+    #boxevi .box{
+        flex: 0 1 100%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
 }
