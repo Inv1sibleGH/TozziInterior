@@ -655,7 +655,7 @@ footer > div:last-child{
     object-fit: cover;
 }
 @media (max-width: 1400px){
-    #hero h2{
+    #navMenu h2{
         font-size: 1.2rem;
     }
 }
