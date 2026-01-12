@@ -1,6 +1,5 @@
 var prodavnica = document.getElementById("prodavnica");
 
-
 var proizvodi = [
   { naziv: "Astal", opis: "Masivan drveni sto za trpezariju, 150x90 cm, furnir hrasta.", slika: "/namestaj/table.jpg", alt: "Drveni sto", cena: "220 EUR" },
   { naziv: "Radni sto", opis: "Minimalistički radni sto od punog drveta, 120x60 cm.", slika: "/namestaj/desk.jpg", alt: "Radni sto", cena: "180 EUR" },

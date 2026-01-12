@@ -1,7 +1,6 @@
 
 //regex validacija forme i tako to
 var form = document.getElementById("kontakt");
-
 var nameEl = document.getElementById("name");
 var emailEl = document.getElementById("email");
 var telEl = document.getElementById("telefon");
@@ -36,31 +35,26 @@ form.addEventListener("submit", (e) => {
     errName.textContent = "Unesite ime i prezime (bar dve reci).";
     ok = false;
   }
-
   // Email
   if (!emailRegex.test(emailEl.value.trim())) {
     errEmail.textContent = "Unesite ispravan email.";
     ok = false;
   }
-
   // Telefon
   if (!phoneRegex.test(telEl.value.trim())) {
     errTel.textContent = "Unesite ispravan telefon.";
     ok = false;
   }
-
   // Usluga
   if (uslugaEl.value === "") {
     errUsluga.textContent = "Izaberite tip usluge.";
     ok = false;
   }
-
   // Poruka
   if (msgEl.value.trim().length < 10) {
     errMsg.textContent = "Poruka mora imati bar 10 karaktera.";
     ok = false;
   }
-
   if (ok) {
     document.getElementById("success-msg").textContent = "Poruka uspešno poslata.";
     form.reset();
