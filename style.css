@@ -655,7 +655,7 @@ footer > div:last-child{
     object-fit: cover;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
     #hero h1{
         font-size: 5rem;
