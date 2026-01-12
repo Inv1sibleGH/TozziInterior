@@ -46,7 +46,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%;
+    padding: 0 10%;
 }
 #hero h1{
     font-size: 7rem;
@@ -56,6 +56,8 @@ a{
     margin-bottom: 0;
 }
 #hero h2{
+    color: black;
+    text-shadow: 1px 1px 5px white;
     margin-left: 1.5rem;
     font-size: 1.5rem;
 }
@@ -120,6 +122,7 @@ nav a:hover{
     margin-bottom: 1rem;
     text-shadow: 1px 1px 2px black;
     color: gold;
+    margin-top: 0.5rem;
 }
 #ko-smo-mi p{
     font-size: 1.5rem;
@@ -139,7 +142,7 @@ nav a:hover{
 
 
 #usluge{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(index_assets/pexels-photo-7195736.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(index_assets/pexels-photo-7195736.jpeg);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -165,12 +168,13 @@ nav a:hover{
     flex-wrap: wrap;
     justify-content: center; /* lepo poravnanje kad ostane 1 u redu */
     gap: 2%; /* bolje od margin-hacka */
+    margin-bottom: 3rem;
 }
 
 /* BOX */
 #boxevi .box{
-    background-color: rgb(153, 153, 153);
-    box-shadow: 10px 10px rgb(103, 82, 6);
+    background-color: rgb(58, 58, 58);;
+    box-shadow: 5px 5px rgb(52, 42, 3);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -199,11 +203,15 @@ nav a:hover{
     margin-top: 5%;
 }
 .box h4{
+    color: goldenrod;
+    font-size: 2rem;
     text-align: center;
     font-size: 1.8rem;
     margin: 1rem 0;
 }
 .box p{
+    color: white;
+    font-size: 1.2rem;
     padding: 0 1rem;
 }
 
@@ -216,13 +224,22 @@ nav a:hover{
     justify-content: space-between;
 }
 #galerija button{
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     border: none;
     width: 18%;
 }
 #galerija button:hover{
     transition: 0.4s;
     background-color:rgba(0, 0, 0, 0.4);
+}
+#galerija h1{
+    color: goldenrod;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px black;
+}
+.fa-chevron-right, .fa-chevron-left{
+    color: black;
+    font-size: 3rem;
 }
 
 /*fix za header da bi radio sa js, ignorisite header iznad molicu*/
@@ -266,7 +283,62 @@ nav a:hover{
 }
 /* ostatak je u @media za telefone sa display:none */
 
+#namestaj{
+    height: auto;
+    padding: 2rem 10%;
+    background-color: #232323;
+    display: flex;
+}
+#namestaj #namestaj-levo{
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#namestaj #namestaj-levo h3{
+    color: goldenrod;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#namestaj #namestaj-levo p{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+#namestaj #namestaj-levo button{
+    width: fit-content;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background: goldenrod;
+    color: #111;
+    transition: transform 0.12s ease, filter 0.2s ease;
+}
 
+#namestaj #arrow-left, #namestaj #arrow-right{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    height: fit-content;
+    align-self: center;
+    color: goldenrod;
+}
+#namestaj #arrow-left{
+    position: relative;
+    left: 20px;
+    z-index: 2;
+}
+#namestaj #arrow-right{
+    position: relative;
+    right: 20px;
+    z-index: 2;
+}
+.fa-chevron-circle-left, .fa-chevron-circle-right{
+    font-size: 3rem;
+}
 
 footer{
     height: auto;
@@ -311,7 +383,20 @@ footer .footer-links{
     font-size: 1.2rem;
     
 }
+#footertext{
+padding-right: 10%;
+}
+#footertext p{
+    color: gainsboro;
+    font-size: 1rem;
+}
+#zapratitenas{
 
+    align-self: flex-start;
+}
+footer > div:last-child{
+    align-self: flex-start;
+}
 
 
 
@@ -329,6 +414,47 @@ footer .footer-links{
 }
 
 
+
+#link-do-kontakta{
+    padding: 5% 30%;
+    text-align: center;
+    background-image: 
+    linear-gradient(
+      rgba(49, 49, 49, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("index_assets/pexels-fotios-photos-1090638.jpg");
+    background-size: cover;
+    background-position:center;
+    height: auto;
+}
+#link-do-kontakta h4{
+    font-size: 2rem;
+    color: goldenrod;
+}
+#link-do-kontakta p{
+    color: gainsboro;
+    font-size: 1.2rem;
+}
+#link-do-kontakta a{
+    font-size: 1.2rem;
+    color: goldenrod;
+}
+#link-do-kontakta a:hover{
+    text-decoration: underline;
+}
+#link-do-kontakta button{
+    margin-top: 1rem;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background: goldenrod;
+    color: #111;
+    transition: transform 0.12s ease, filter 0.2s ease;
+}
 
 
 
@@ -448,8 +574,99 @@ footer .footer-links{
 
 
 
+/* dinamicko generisanje */
+
+#prodavnica{
+    padding: 2rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #2e2e2e;
+}
+
+.kartica{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(69, 69, 69);
+    margin: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px rgb(52, 42, 3);
+}
+.kartica:hover{
+    transform: scale(1.02);
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+.kartica-slika{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.kartica-naziv{
+    color: goldenrod;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.7rem 0 0.5rem 0;
+}
+.kartica-opis{
+    color: white;
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+.kartica-cena{
+    color: goldenrod;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+#namestaj-desno {
+  min-width: 30%;
+  display: flex;
+}
+
+.author-content h2{
+    font-size: 2.5rem;
+    color: goldenrod;
+    margin-bottom: 0.5rem;
+}
+.author-content p{
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 0;
+}
+.author-image-box{
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 5px 5px rgb(52, 42, 3);
+    margin-left: 2rem;
+}
+.author-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 @media (max-width: 1024px) {
+
+    #hero h1{
+        font-size: 5rem;
+        text-align: center;
+    }
+    #hero h2{
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
     #ko-smo-mi{
         flex-direction: column;
         align-items: center;
@@ -514,7 +731,35 @@ footer .footer-links{
   .nav-menu.open{
     transform: translateX(0);   /* uđe na ekran */
   }
+
+  #link-do-kontakta{
+    padding: 5% 5%;
+  }
     
+  #namestaj{
+      flex-direction: column;
+      align-items: center;
+  }
+  #namestaj #namestaj-levo{
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+        align-items: center;
+  }
+  #namestaj #arrow-left, #namestaj #arrow-right{
+      
+  }
+
+  /* Center Linkovi on tablet and smaller */
+  footer > div:last-child{
+      align-self: center;
+  }
+
+  /* Center zapratitenas on tablet and smaller */
+  #zapratitenas{
+      align-self: center;
+  }
 }
 @media (max-width: 768px){
     #boxevi .box{

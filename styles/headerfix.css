@@ -1,0 +1,8 @@
+header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 4.5rem;
+    transition: background-color 0.3s;
+}
+#fushlogo{
+    display: block;
+}

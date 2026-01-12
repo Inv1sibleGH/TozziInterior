@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="styles/headerfix.css">
 </head>
 <body>
     <header id="header">
@@ -15,9 +15,8 @@
         <nav>
             <ul id="navMenu" class="nav-menu">
             <li><a href="index.html"><h2>Početna</h2></a></li>
-            <li><a href="#usluge"><h2>Usluge</h2></a></li>
-            <li><a href="#galerija"><h2>Galerija</h2></a></li>
-            <li><a href="#kontakt"><h2>Kontakt</h2></a></li>
+            <li><a href="namestaj.html"><h2>Nameštaj</h2></a></li>
+            <li><a href="kontakt.html"><h2>Kontakt</h2></a></li>
             <li><a href="autor.html"><h2>Autor</h2></a></li>
             <li><a href="projekat.zip" download><h2>Download ZIP</h2></a></li>
             </ul>
@@ -34,8 +33,8 @@
             <h2>Veljko Milić 171/23</h2>
             <p>student Visoke ICT</p>
         </div>
-        <div>
-            <img src="index_assets/autor.jpg" alt="Autor Veljko Milic" class="author-image">
+        <div class="author-image-box">
+            <img src="index_assets/DSC_0838cut.JPG" alt="Autor Veljko Milic" class="author-image">
         </div>
     </section>
     
@@ -44,7 +43,10 @@
         <div class="firstdiv">
             <img src="index_assets/tozzi-removebg-preview.png" alt="">
         </div>
-        <div>
+        <div id="footertext">
+            <p>Specijalizovani smo za projektovanje i izradu nameštaja po meri na teritoriji Beograda. Bilo da uređujete stan, kuću ili poslovni prostor, nudimo kompletna rešenja – od ideje do završne montaže.</p>
+        </div>
+        <div id="zapratitenas">
             <h4>Zapratite nas:</h4>
             <i class="fi fi-brands-instagram"></i><a href="#" class="footer-links">@tozziinteriordesign</a><br />
             <i class="fi fi-br-phone-call"></i><a href="#" class="footer-links">+381123456789</a><br />
@@ -61,8 +63,7 @@
             
     </footer>
     
-    <script src="scripts/indexscript.js">
-
-    </script>
+    <script src="scripts/indexscript.js"></script>
+    <script src="scripts/scrollablegenerisanje.js"></script>
 </body>
 </html>

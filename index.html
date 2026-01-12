@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     
@@ -60,23 +60,21 @@
                 <div class="box-picture">
                     <img src="index_assets/pexels-lexovertoom-1109541.jpg" alt="" loading="lazy">
                     <h4>Planiranje</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium perspiciatis obcaecati quidem tenetur, quia sit, esse sint reiciendis exercitationem ipsa nobis eligendi. Labore optio fugit rerum aperiam vitae pariatur et.</p>
+                    <p>Svaki projekat započinjemo detaljnim planiranjem kako bismo razumeli prostor, potrebe i navike klijenta. Kroz razgovor i analizu dolazimo do rešenja koje je funkcionalno, estetski usklađeno i dugoročno održivo. Cilj nam je da se nameštaj prirodno uklopi u prostor, a ne da ga opterećuje.</p>
                 </div>
             </div>
             <div class="box">
                 <div class="box-picture">
-                    <img src="index_assets/pexels-lexovertoom-1109541.jpg" alt="" loading="lazy">
-                    <h4>Izrada</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium perspiciatis obcaecati quidem tenetur, quia sit, esse sint reiciendis exercitationem ipsa nobis eligendi. Labore optio fugit rerum aperiam vitae pariatur et.</p>
-                
+                    <img src="index_assets\pexels-anastasia-shuraeva-6232447.jpg" alt="" loading="lazy">
+                    <h4>Izrada po meri</h4>
+                    <p>Nameštaj izrađujemo po meri, prema tačnim dimenzijama i jasno definisanom dogovoru. Posebnu pažnju posvećujemo detaljima, kvalitetu izrade i izboru materijala kako bi svaki komad bio trajan i pouzdan u svakodnevnoj upotrebi. Proces izrade je transparentan i prilagođen konkretnom projektu.</p>
                 </div>
             </div>
             <div class="box">
                 <div class="box-picture">
-                    <img src="index_assets/pexels-lexovertoom-1109541.jpg" alt="" loading="lazy">
-                    <h4>Planiranje</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium perspiciatis obcaecati quidem tenetur, quia sit, esse sint reiciendis exercitationem ipsa nobis eligendi. Labore optio fugit rerum aperiam vitae pariatur et.</p>
-                
+                    <img src="namestaj/nightstand.jpg" alt="" loading="lazy">
+                    <h4>Prodaja nameštaja</h4>
+                    <p>U ponudi imamo gotove komade drvenog nameštaja koji su pažljivo dizajnirani i izrađeni sa fokusom na funkcionalnost. Namenjeni su onima koji žele proverena rešenja bez čekanja i dodatnih prilagođavanja. Kvalitet materijala i završne obrade ostaje u fokusu kod svakog proizvoda.</p>
                 </div>
             </div>
         </div>
@@ -87,17 +85,41 @@
 
     </section>
     <section id="galerija">
-        <button id="backbutton"></button>
-        <a href="#"><h1>Galerija</h1></a>
-        <button id="nextbutton"></button>
+        <button id="backbutton"><i class="fas fa-chevron-left"></i></button>
+        <h1>Galerija</h1>
+        <button id="nextbutton"><i class="fas fa-chevron-right"></i></button>
     </section>
 
+    <section id="namestaj">
+        <div id="namestaj-levo">
+            <h3>Nameštaj stvoren za tvoj prostor</h3>
+            <p>Pogledajte našu ponudu pažljivo izrađenog drvenog nameštaja i pronađite komade koji se prirodno uklapaju u vaš prostor.</p>
+            <a href="namestaj.html"><button>Pogledaj ponudu</button></a>
+        </div>
+        <div id="namestaj-desno">
+            <button id="arrow-left"><i class="fas fa-chevron-circle-left"></i></button>
+            <div id="prodavnica-scrollable"></div>
+            <button id="arrow-right"><i class="fas fa-chevron-circle-right"></i></button>
+        </div>
+    </section>
     
+    <section id="link-do-kontakta">
+        <h4>Povežite se sa nama</h4>
+        <p>Ukoliko ste u potrazi za savremenim rešenjima za enterijer, slobodno nas kontaktirajte. Rado ćemo čuti vaše ideje i pomoći vam da ih ostvarite. Vaš prostor zaslužuje najbolje, a mi smo tu da vam to pružimo.</p>
+        <a href="kontakt.html"><button>Kontaktirajte nas</button></a>
+    </section>
+
+
+
+
     <footer>
         <div class="firstdiv">
             <img src="index_assets/tozzi-removebg-preview.png" alt="">
         </div>
-        <div>
+        <div id="footertext">
+            <p>Specijalizovani smo za projektovanje i izradu nameštaja po meri na teritoriji Beograda. Bilo da uređujete stan, kuću ili poslovni prostor, nudimo kompletna rešenja – od ideje do završne montaže.</p>
+        </div>
+        <div id="zapratitenas">
             <h4>Zapratite nas:</h4>
             <i class="fi fi-brands-instagram"></i><a href="#" class="footer-links">@tozziinteriordesign</a><br />
             <i class="fi fi-br-phone-call"></i><a href="#" class="footer-links">+381123456789</a><br />
@@ -114,8 +136,8 @@
             
     </footer>
     
-    <script src="scripts/indexscript.js">
-
-    </script>
+    <script src="scripts/indexscript.js"></script>
+    <script src="scripts/headershade.js"></script>
+    <script src="scripts/scrollablegenerisanje.js"></script>
 </body>
 </html>

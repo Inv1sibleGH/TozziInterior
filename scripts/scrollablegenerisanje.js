@@ -1,5 +1,7 @@
-var prodavnica = document.getElementById("prodavnica");
-
+var prodavnica = document.getElementById("prodavnica-scrollable");
+var i = 2;
+const leftArrow = document.getElementById("arrow-left");
+const rightArrow = document.getElementById("arrow-right");
 
 var proizvodi = [
   { naziv: "Astal", opis: "Masivan drveni sto za trpezariju, 150x90 cm, furnir hrasta.", slika: "/namestaj/table.jpg", alt: "Drveni sto", cena: "220 EUR" },
@@ -11,8 +13,21 @@ var proizvodi = [
   { naziv: "TV sto", opis: "TV sto sa otvorenim policama, širina 160 cm.", slika: "/namestaj/tv-stand.jpg", alt: "TV sto", cena: "240 EUR" },
   { naziv: "Konzolni sto", opis: "Uzak konzolni sto za hodnik, masivno drvo.", slika: "/namestaj/console-table.webp", alt: "Konzolni sto", cena: "170 EUR" }
 ];
+/*note to self ne mogu da prosledim funkciju pored klika bez da se odmah pozove i svaki put vraca isti rezultat vec izvrsene funkcije*/
+leftArrow.addEventListener("click", () => {
+    i--;
+    if(i<0) i = proizvodi.length -1;
+    prikaziProizvod(i);
+});
+rightArrow.addEventListener("click", () => {
+    i++;
+    if(i>proizvodi.length-1) i = 0;
+    prikaziProizvod(i);
+});
 
-for (let i = 0; i < proizvodi.length; i++) {
+function prikaziProizvod(i) {
+    
+    console.log("kliknuto na strelicu"+i);
     var x = document.createElement("div");
     x.className = "kartica";
 
@@ -37,5 +52,6 @@ for (let i = 0; i < proizvodi.length; i++) {
     cena.className = "kartica-cena";
     x.appendChild(cena);
 
-    prodavnica.appendChild(x);
+    prodavnica.replaceChildren(x);
 }
+prikaziProizvod(i);
